@@ -12,10 +12,36 @@ public class Car
         System.out.println("Die Geschwindigkeit beträgt: " + this.speed + "!");
     }
 
-    public Car(String color, int wheels, double speed)
+    public Car(String color, int wheels, double speed)//Konstruktor wo in der Klammer alle PArameter angegeben wurden
     {
         this.color = color;
         this.wheels = wheels;
         this.speed = speed;
+    }
+
+    public String getColor()
+    {
+        return color;
+    }
+
+    public int getWheels()
+
+    {
+        return wheels;
+    }
+
+    public double getSpeed()
+    {
+        return speed;
+    }
+    public void acclerate(double geschwindigkeit)
+    {
+        this.speed = this.speed+geschwindigkeit;
+        System.out.println(speed);
+    }
+    public void slowdown(double geschwindigkeit)
+    {
+        this.speed = this.speed-geschwindigkeit;
+        System.out.println(speed);
     }
 }

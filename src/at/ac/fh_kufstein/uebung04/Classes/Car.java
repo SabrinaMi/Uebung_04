@@ -1,6 +1,6 @@
 package at.ac.fh_kufstein.uebung04.Classes;
 
-public class Car
+public abstract class Car
 {
     String color;
     int wheels;
@@ -16,6 +16,36 @@ public class Car
     {
     }
 
+    public String getColor()
+    {
+        return color;
+    }
+
+    public void setColor(String color)
+    {
+        this.color = color;
+    }
+
+    public int getWheels()
+    {
+        return wheels;
+    }
+
+    public void setWheels(int wheels)
+    {
+        this.wheels = wheels;
+    }
+
+    public double getSpeed()
+    {
+        return speed;
+    }
+
+    public void setSpeed(double speed)
+    {
+        this.speed = speed;
+    }
+
     public Car(String color, int wheels, double speed)//Konstruktor wo in der Klammer alle PArameter angegeben wurden
     {
         this.color = color;
@@ -23,21 +53,7 @@ public class Car
         this.speed = speed;
     }
 
-    public String getColor()
-    {
-        return color;
-    }
 
-    public int getWheels()
-
-    {
-        return wheels;
-    }
-
-    public double getSpeed()
-    {
-        return speed;
-    }
 
     public void acclerate(double geschwindigkeit)
     {
@@ -50,4 +66,5 @@ public class Car
         this.speed = this.speed - geschwindigkeit;
         System.out.println(speed);
     }
+
 }
